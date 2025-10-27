@@ -1,4 +1,4 @@
-// import ejs 
+// import ejs
 const ejs = require('ejs');
 
 
@@ -24,8 +24,12 @@ const researches = fs.readFileSync('data/researches.json', 'utf8');
 data.researches = JSON.parse(researches);
 try{
     const template = fs.readFileSync('templates/index.ejs', 'utf8');
-    const html = ejs.render(template, data);
+    const html = ejs.render(template, data, {
+        filename: 'templates/index.ejs',
+        root: './templates'
+    });
     fs.writeFileSync('index.html', html);
+    console.log('Portfolio generated successfully!');
 }catch(err){
     console.log(err);
 }

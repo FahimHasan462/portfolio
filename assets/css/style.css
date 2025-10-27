@@ -1985,3 +1985,182 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* border : 1px solid #ccc; */
 
 }
+
+/* Subtle falling background graphics */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.01) 0%, transparent 50%);
+  animation: backgroundFloat 25s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Falling geometric shapes */
+.falling-shape {
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+  animation: fallDown 12s linear infinite;
+}
+
+.falling-shape:nth-child(1) { 
+  left: 10%; 
+  width: 6px; 
+  height: 6px; 
+  background: #4a90e2; 
+  border-radius: 50%;
+  animation-delay: 0s;
+  animation-duration: 8s;
+}
+
+.falling-shape:nth-child(2) { 
+  left: 20%; 
+  width: 5px; 
+  height: 5px; 
+  background: #7b68ee; 
+  border-radius: 50%;
+  animation-delay: 1s;
+  animation-duration: 10s;
+}
+
+.falling-shape:nth-child(3) { 
+  left: 30%; 
+  width: 4px; 
+  height: 12px; 
+  background: #20b2aa; 
+  animation-delay: 2s;
+  animation-duration: 9s;
+}
+
+.falling-shape:nth-child(4) { 
+  left: 40%; 
+  width: 7px; 
+  height: 7px; 
+  background: #ff6b6b; 
+  border-radius: 50%;
+  animation-delay: 3s;
+  animation-duration: 11s;
+}
+
+.falling-shape:nth-child(5) { 
+  left: 50%; 
+  width: 5px; 
+  height: 5px; 
+  background: #ffa500; 
+  border-radius: 50%;
+  animation-delay: 4s;
+  animation-duration: 7s;
+}
+
+.falling-shape:nth-child(6) { 
+  left: 60%; 
+  width: 4px; 
+  height: 10px; 
+  background: #32cd32; 
+  animation-delay: 5s;
+  animation-duration: 9s;
+}
+
+.falling-shape:nth-child(7) { 
+  left: 70%; 
+  width: 6px; 
+  height: 6px; 
+  background: #ff1493; 
+  border-radius: 50%;
+  animation-delay: 6s;
+  animation-duration: 8s;
+}
+
+.falling-shape:nth-child(8) { 
+  left: 80%; 
+  width: 5px; 
+  height: 5px; 
+  background: #00ced1; 
+  border-radius: 50%;
+  animation-delay: 7s;
+  animation-duration: 10s;
+}
+
+.falling-shape:nth-child(9) { 
+  left: 90%; 
+  width: 4px; 
+  height: 8px; 
+  background: #ffd700; 
+  animation-delay: 8s;
+  animation-duration: 6s;
+}
+
+@keyframes backgroundFloat {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1) translateY(0); 
+  }
+  50% { 
+    opacity: 0.6; 
+    transform: scale(1.05) translateY(-10px); 
+  }
+}
+
+@keyframes fallDown {
+  0% { 
+    transform: translateY(-100px) rotate(0deg); 
+    opacity: 0; 
+  }
+  10% { 
+    opacity: 0.6; 
+  }
+  90% { 
+    opacity: 0.6; 
+  }
+  100% { 
+    transform: translateY(100vh) rotate(360deg); 
+    opacity: 0; 
+  }
+}
+
+/* Floating lines */
+.floating-line {
+  position: fixed;
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, rgba(74, 144, 226, 0.6), transparent);
+  pointer-events: none;
+  z-index: -1;
+  animation: floatLine 15s linear infinite;
+}
+
+.floating-line:nth-child(1) { left: 15%; animation-delay: 0s; }
+.floating-line:nth-child(2) { left: 35%; animation-delay: 5s; }
+.floating-line:nth-child(3) { left: 55%; animation-delay: 10s; }
+.floating-line:nth-child(4) { left: 75%; animation-delay: 15s; }
+.floating-line:nth-child(5) { left: 85%; animation-delay: 20s; }
+
+@keyframes floatLine {
+  0% { 
+    transform: translateY(-100px) translateX(0); 
+    opacity: 0; 
+  }
+  10% { 
+    opacity: 0.7; 
+  }
+  90% { 
+    opacity: 0.7; 
+  }
+  100% { 
+    transform: translateY(100vh) translateX(20px); 
+    opacity: 0; 
+  }
+}

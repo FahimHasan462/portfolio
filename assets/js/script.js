@@ -157,3 +157,34 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+// email copy functionality
+const emailLink = document.getElementById("email-link");
+
+if (emailLink) {
+  emailLink.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default mailto action
+    
+    const email = "Fahimhasan462@gmail.com";
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(email).then(function() {
+      // Show a temporary success message
+      const originalText = emailLink.textContent;
+      emailLink.textContent = "Email copied!";
+      emailLink.style.color = "var(--orange-yellow-crayola)";
+      
+      // Reset after 2 seconds
+      setTimeout(function() {
+        emailLink.textContent = originalText;
+        emailLink.style.color = "";
+      }, 2000);
+    }).catch(function(err) {
+      console.error('Could not copy text: ', err);
+      // Fallback: open mailto if clipboard fails
+      window.location.href = "mailto:" + email;
+    });
+  });
+}

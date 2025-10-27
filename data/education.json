@@ -1,35 +1,30 @@
 [
     {
-        "institution": "Bangladesh University of Engineering and Technology",
+        "institution": "BRAC University",
         "degree": "B.Sc. in Computer Science and Engineering",
-        "duration" : "Apr 2019 - May 2024",
-        "gpa" : "CGPA: 3.90/4.00",
-        "description" : "Ranked in the top 15% of class with two Dean's List awards for merit. Additionally, was recognized once for outstanding extra curricular activities. ",
+        "duration" : "December 2020 - Janunary 2026",
         "courses" : [
-            "CSE 305 - Computer Architecture",
-            "CSE 307 - Software Engineering",
-            "CSE 309 - Compiler Design",
-            "CSE 313 - Operating Systems",
-            "CSE 317 - Artificial Intelligence",
-            "CSE 321 - Computer Networks",
-            "CSE 405 - Computer Security",
-            "CSE 409 - Computer Graphics",
-            "CSE 463 - Introduction to Bioinformatics",
-            "CSE 471 - Machine Learning",
-            "MATH 245 - Statistics and Probability",
-            "MATH 247 - Linear Algebra"
+            "CSE 340 - Computer Architecture",
+            "CSE 470 - Software Engineering",
+            "CSE 321 - Operating Systems",
+            "CSE 422 - Artificial Intelligence",
+            "CSE 421 - Computer Networks",
+            "CSE 495 - Computer Security",
+            "CSE 423 - Computer Graphics",
+            "CSE 425 - Nural Networks",
+            "CSE 471 - Software Architecture",
+            "CSE 460 - Inroduction To Robotics",
+            "CSE 230 - Statistics and Probability",
+            "MATH 216 - Linear Algebra"
         ]
     },{
-        "institution": "Notre Dame College, Dhaka",
+        "institution": "Dhaka College",
         "degree": "Higher Secondary Certificate (HSC)",
-        "duration" : "2018",
-        "gpa" : "GPA: 5.00/5.00"
+        "duration" : "2019"
     },{
-        "institution": "Ideal School & College, Motijheel, Dhaka",
+        "institution": "Willes Little Flower School and College, Dhaka",
         "degree" : "Secondary School Certificate (SSC)",
-        "duration" : "2016",
-        "gpa" : "GPA: 5.00/5.00",
-        "description" : "Received board scholarship."
+        "duration" : "2017"
     }
 ]
 
